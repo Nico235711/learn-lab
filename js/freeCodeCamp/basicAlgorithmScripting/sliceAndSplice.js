@@ -7,10 +7,13 @@
 // Return the resulting array. The input arrays should remain the same after the function runs.
 
 function frankenSplice(arr1, arr2, n) {
+  const newArr = [...arr2]
   // se empieza desde el indice n
   // no se le eliminan elementos
   // se insertan los elementos del arr1 usando el spread operator
-  return arr2.splice(n, 0, ...arr1);
+  newArr.splice(n, 0, ...arr1)
+  // console.log(newArr);
+  return newArr;
 }
 
 console.log("🚀 ~ frankenSplice([1, 2, 3], [4, 5, 6], 1);:", frankenSplice([1, 2, 3], [4, 5, 6], 1))
